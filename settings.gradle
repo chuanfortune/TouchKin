@@ -1,0 +1,6 @@
+include ':app', ':ripple-background', ':tooltip-library', ':camera'
+
+project(':ripple-background').projectDir = new File('ripple-background-library')
+include ':viewPageIndicator'
+include ':aphidFlipViewLibrary'
+project(':tooltip-library').projectDir = new File('tooltips-library')
