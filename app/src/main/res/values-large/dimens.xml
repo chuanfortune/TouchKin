@@ -1,0 +1,48 @@
+<resources>
+
+    <dimen name="font_size_smallest">12sp</dimen>
+    <dimen name="font_size_small">18sp</dimen>
+    <dimen name="font_size_normal">21sp</dimen>
+    <dimen name="font_size_large">27sp</dimen>
+    <dimen name="font_size_largest">33sp</dimen>
+
+    <dimen name="margin_smallest">6dp</dimen>
+    <dimen name="margin_small">11dp</dimen>
+    <dimen name="margin_normal">15dp</dimen>
+    <dimen name="margin_large">21dp</dimen>
+    <dimen name="margin_largest">30dp</dimen>
+    <dimen name="margin_extra_large">45dp</dimen>
+
+    <dimen name="space_smallest">30dp</dimen>
+    <dimen name="space_small">60dp</dimen>
+    <dimen name="space_normal">90dp</dimen>
+    <dimen name="space_large">110dp</dimen>
+    <dimen name="space_largest">150dp</dimen>
+    <dimen name="space_extra_large">180dp</dimen>
+
+
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <!-- Default height of an action bar. -->
+    <dimen name="abc_action_bar_default_height_material">48dp</dimen>
+    <!-- Default padding of an action bar. -->
+    <dimen name="abc_action_bar_default_padding_material">0dp</dimen>
+    <!-- Default text size for action bar title. -->
+    <dimen name="abc_text_size_title_material_toolbar">14dp</dimen>
+    <!-- Default text size for action bar subtitle. -->
+    <dimen name="abc_text_size_subtitle_material_toolbar">12dp</dimen>
+    <dimen name="default_margin">12dip</dimen>
+    <dimen name="height_toolbar">45dp</dimen>
+    <dimen name="size_circle_image">210dp</dimen>
+    <dimen name="font_size_mid">24sp</dimen>
+    <dimen name="size_holo_circular_progressBar">300dp</dimen>
+    <dimen name="stroke_holo_circular_progress">15dp</dimen>
+    <dimen name="size_stroke_out_circle">18dp</dimen>
+    <dimen name="margin_top_step_dashboard_activity">14dp</dimen>
+    <dimen name="size_tab_image">45dp</dimen>
+    <dimen name="font_size_toolbar_add_member">25sp</dimen>
+
+</resources>

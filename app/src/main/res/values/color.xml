@@ -3,7 +3,7 @@
 
     <color name="white">#ffffff</color>
     <color name="black">#000000</color>
-    <color name="text_orange">#ea6927</color>
+    <color name="text_orange">#EA6927</color>
     <color name="text_grey">#8b8c93</color>
     <color name="tab_bg">#83848b</color>
     <color name="tab_selected">#f8935a</color>
@@ -18,6 +18,8 @@
     <color name="green">#31d95d</color>
     <color name="button_grey">#c7c7c7</color>
     <color name="button_orange">#ed824b</color>
+    <color name="color_text_toolbar">#6F7181</color>
+
     
 
 </resources>

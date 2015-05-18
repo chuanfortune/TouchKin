@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <shape xmlns:android="http://schemas.android.com/apk/res/android" android:shape="oval" >
 	<!-- <solid android:color="@color/text_orange" /> -->
-	
-	<stroke android:width="10dp" android:color="@color/outer_ring"/>
-	
+    <gradient android:type="radial" android:gradientRadius="250"
+        android:startColor="@android:color/white" android:endColor="@android:color/white" />
+	<stroke android:width="@dimen/size_stroke_out_circle" android:color="@color/outer_ring"
+      />
+
 </shape>

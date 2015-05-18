@@ -2,12 +2,14 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context="com.touchKin.touckinapp.DashBoardActivity" >
+    tools:context="com.touchKin.touckinapp.DashBoardActivity"
+    >
 
     <item
         android:id="@+id/parentNameMenu"
-        android:title="Mummy"
-        app:showAsAction="always|withText"/>
+        android:title="@string/txt_mum"
+        app:showAsAction="always|withText"
+        />
     <item
         android:id="@+id/parentIconMenu"
         android:icon="@drawable/ic_action_down"

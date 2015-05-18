@@ -163,12 +163,12 @@ public class SignUpActivity extends ActionBarActivity {
 	 * 
 	 * @Override protected void onProgressUpdate(Void... values) { } }
 	 */
-
+    //todo check validation
 	private boolean checkValidation() {
 		boolean ret = true;
-		if (!Validation.isPhoneNumber(phone_number, true)) {
-			ret = false;
-		}
+//		if (!Validation.isPhoneNumber(phone_number, true)) {
+//			ret = false;
+//		}
 		return ret;
 	}
 

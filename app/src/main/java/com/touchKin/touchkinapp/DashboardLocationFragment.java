@@ -73,9 +73,13 @@ public class DashboardLocationFragment extends Fragment implements
 	public void onStop() {
 		// TODO Auto-generated method stub
 		super.onStop();
-		googleMap.clear();
+        try {
+            googleMap.clear();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
 
-	}
+    }
 
 	// Inflate the view for the fragment based on layout XML
 	@Override

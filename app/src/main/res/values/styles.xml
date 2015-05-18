@@ -42,4 +42,40 @@
         <item name="thumb_visible">true</item>
     </style>
 
+
+
+
+    <!--<style name="DashBoardTheme" parent="@style/AppBaseTheme">-->
+        <!--<item name="android:itemTextAppearance">@style/TextAppearance</item>-->
+    <!--</style>-->
+
+    <!--<style name="TextAppearance">-->
+        <!--<item name="android:textColor">@color/color_text_toolbar</item>-->
+    <!--</style>-->
+    <style name="DashboardActionBarTheme" parent="@style/AppBaseTheme">
+        <!--<item name="android:actionBarStyle">@style/MyActionBar</item>-->
+   <!---->
+        <!--<item name="android:actionMenuTextColor">@color/color_text_toolbar</item>-->
+    </style>
+
+    <!-- ActionBar styles -->
+    <style name="MyActionBar"
+        parent="@android:style/Widget.Holo.ActionBar">
+        <item name="android:titleTextStyle">@style/MyActionBarTitleText</item>
+    </style>
+
+    <!-- ActionBar title text -->
+    <style name="MyActionBarTitleText"
+        parent="@android:style/TextAppearance.Holo.Widget.ActionBar.Title">
+        <item name="android:textColor">@color/color_text_toolbar</item>
+    </style>
+
+    <style name="ToolbarCustomTheme" parent="ThemeOverlay.AppCompat.Light">
+        <item name="android:textColorPrimary">@color/color_text_toolbar</item>
+        <item name="android:textColorSecondary">@color/color_text_toolbar</item>
+        <item name="actionMenuTextColor">@color/color_text_toolbar</item>
+    </style>
+
+    <!-- ActionBar tabs text styles -->
+
 </resources>

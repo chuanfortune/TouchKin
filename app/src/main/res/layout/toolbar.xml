@@ -1,19 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="@dimen/space_normal"
     android:background="@drawable/toolbar_bottom_background"
-    android:theme="@style/ThemeOverlay.AppCompat.Light" >
+    android:theme="@style/ToolbarCustomTheme"
+    android:id = "@+id/tool_bar"
+    android:gravity="center"
 
+   >
     <TextView
         android:id="@+id/toolbar_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:text="Toolbar Title"
+        android:layout_centerInParent="true"
+        android:text="@string/title_toolbar"
+        android:textStyle="bold"
         android:textColor="@color/text_orange"
-        android:textSize="25sp" />
+        android:textSize="@dimen/font_size_large" />
 
-  
+    <!--<RelativeLayout-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="match_parent"   >-->
 
+        <!--<TextView-->
+            <!--android:id="@+id/textView_add_member_toolbar"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="Mum"-->
+            <!--android:textSize="@dimen/font_size_toolbar_add_member"-->
+            <!--android:gravity="center_vertical"-->
+            <!--android:layout_centerVertical="true"-->
+            <!--android:layout_alignParentRight="true"-->
+
+            <!--android:drawableRight="@drawable/ic_action_down"-->
+            <!--android:visibility="visible"/>-->
+
+
+
+
+    <!--</RelativeLayout>-->
 </android.support.v7.widget.Toolbar>

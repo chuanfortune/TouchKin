@@ -6,5 +6,13 @@
          would include 7" and 10" devices in landscape (~960dp and ~1280dp respectively).
     -->
     <dimen name="activity_horizontal_margin">64dp</dimen>
+    <dimen name="size_circle_image">140dp</dimen>
+    <dimen name="font_size_mid">24sp</dimen>
+    <dimen name="size_holo_circular_progressBar">200dp</dimen>
+    <dimen name="stroke_holo_circular_progress">15dp</dimen>
+    <dimen name="size_stroke_out_circle">12dp</dimen>
+    <dimen name="margin_top_step_dashboard_activity">-32dp</dimen>
+    <dimen name="size_tab_image">45dp</dimen>
+    <dimen name="font_size_toolbar_add_member">17sp</dimen>
 
 </resources>

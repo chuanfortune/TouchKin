@@ -183,7 +183,7 @@ public class Details extends ActionBarActivity implements OnClickListener {
 	public void onClick(View v) {
 		// TODO Auto-generated method stub
 		switch (v.getId()) {
-		case R.id.next_button:
+		case R.id.next_detail_button:
 			if (!name.getText().toString().isEmpty()) {
 				String userName = name.getText().toString();
 				updateUser(userName);

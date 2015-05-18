@@ -8,20 +8,26 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import android.annotation.SuppressLint;
+import android.app.ActionBar;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.content.res.Resources;
+import android.graphics.Color;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.v4.app.DialogFragment;
 import android.support.v4.app.FragmentTabHost;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.ActionBarDrawerToggle;
+import android.support.v7.internal.view.menu.ActionMenuItemView;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
+import android.text.SpannableString;
+import android.text.style.ForegroundColorSpan;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -29,12 +35,14 @@ import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.view.ViewGroup;
 import android.view.animation.Animation;
 import android.view.animation.Animation.AnimationListener;
 import android.view.animation.AnimationUtils;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TabHost.OnTabChangeListener;
 import android.widget.TabHost.TabSpec;
@@ -79,6 +87,7 @@ public class DashBoardActivity extends ActionBarActivity implements
 	ActionBarDrawerToggle mDrawerToggle; // Declaring Action Bar Drawer Toggle
 	private ImageAdapter imageAdapter;
 	private Menu menu;
+    TextView mAddMemberTextView;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -97,6 +106,8 @@ public class DashBoardActivity extends ActionBarActivity implements
 				Toast.LENGTH_LONG).show();
 
 		setSupportActionBar(toolbar);
+
+
 		// SharedPreferences pref =
 		// getApplicationContext().getSharedPreferences(
 		// "loginPref", 0);
@@ -108,7 +119,8 @@ public class DashBoardActivity extends ActionBarActivity implements
 		// Log.d("mobile", "" + pref.getString("mobile", null));
 		// Log.d("otp", "" + pref.getString("mobile", null));
 
-		toolbar.inflateMenu(R.menu.toolbar_menu);
+	//toolbar.inflateMenu(R.menu.toolbar_menu);
+
 		// toolbar.setTitle("TouchKin");
 		// toolbar.setOnMenuItemClickListener(new OnMenuItemClickListener() {
 		//
@@ -120,35 +132,35 @@ public class DashBoardActivity extends ActionBarActivity implements
 		// return true;
 		// }
 		// });
-		toolbar.setOnMenuItemClickListener(new Toolbar.OnMenuItemClickListener() {
-			@Override
-			public boolean onMenuItemClick(MenuItem item) {
-				// Handle the menu item
-				int id = item.getItemId();
-				// Toast.makeText(getApplicationContext(), "HI" + id,
-				// Toast.LENGTH_SHORT).show();
-				if (id == R.id.parentNameMenu) {
-					// Not implemented here
-					toggleVissibility();
-					return true;
-				}
-				if (id == R.id.parentIconMenu) {
-					// Not implemented here
-					toggleVissibility();
-					return true;
-				}
-				// switch (id) {
-				// case R.:
-				//
-				// break;
-				//
-				// default:
-				// break;
-				// }
-
-				return true;
-			}
-		});
+//		toolbar.setOnMenuItemClickListener(new Toolbar.OnMenuItemClickListener() {
+//			@Override
+//			public boolean onMenuItemClick(MenuItem item) {
+//				// Handle the menu item
+//				int id = item.getItemId();
+//				// Toast.makeText(getApplicationContext(), "HI" + id,
+//				// Toast.LENGTH_SHORT).show();
+//				if (id == R.id.parentNameMenu) {
+//					// Not implemented here
+//					toggleVissibility();
+//					return true;
+//				}
+//				if (id == R.id.parentIconMenu) {
+//					// Not implemented here
+//					toggleVissibility();
+//					return true;
+//				}
+//				// switch (id) {
+//				// case R.:
+//				//
+//				// break;
+//				//
+//				// default:
+//				// break;
+//				// }
+//
+//				return true;
+//			}
+//		});
 
 		// toolbar.in
 		mRecyclerView = (RecyclerView) findViewById(R.id.RecyclerView);// Assigning
@@ -159,6 +171,15 @@ public class DashBoardActivity extends ActionBarActivity implements
 																		// the
 																		// xml
 																		// View
+        //      add add member view on toolb
+        mAddMemberTextView = (TextView)findViewById(R.id.textView_add_member_toolbar);
+
+        mAddMemberTextView.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                toggleVissibility();
+            }
+        });
 
 		mRecyclerView.setHasFixedSize(true); // Letting the system know that the
 		// list objects are of fixed
@@ -209,6 +230,7 @@ public class DashBoardActivity extends ActionBarActivity implements
 		// to the
 		// view
 		toolbar.setNavigationIcon(R.drawable.ic_drawer);
+
 		mDrawerToggle = new ActionBarDrawerToggle(this, Drawer, null,
 				R.string.navigation_drawer_open,
 				R.string.navigation_drawer_close) {
@@ -264,8 +286,20 @@ public class DashBoardActivity extends ActionBarActivity implements
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.toolbar_menu, menu);
-		this.menu = menu;
+	//	getMenuInflater().inflate(R.menu.toolbar_menu, menu);
+
+	//	this.menu = menu;
+
+   //     ActionMenuItemView menuItem = (ActionMenuItemView)findViewById(R.id.parentNameMenu);
+    //    menuItem.setTextColor(getResources().getColor(R.color.color_text_toolbar));
+    //    menuItem.setTextSize(getResources().getDimension(R.dimen.font_size_smallest));
+
+
+//        CharSequence menuTitle = menuItem.getText();
+//        SpannableString styledMenuTitle = new SpannableString(menuTitle);
+//        styledMenuTitle.setSpan(new ForegroundColorSpan(Color.parseColor("#00FFBB")), 0, menuTitle.length(), 0);
+//        menuItem.setTitle(styledMenuTitle);
+
 		if (selectedParent != null) {
 			setMenuTitle(selectedParent);
 		}
@@ -277,19 +311,19 @@ public class DashBoardActivity extends ActionBarActivity implements
 		// Handle action bar item clicks here. The action bar will
 		// automatically handle clicks on the Home/Up button, so long
 		// as you specify a parent activity in AndroidManifest.xml.
-		int id = item.getItemId();
-		Toast.makeText(getApplicationContext(), "HI menu" + id,
-				Toast.LENGTH_SHORT).show();
-		if (id == R.id.parentNameMenu) {
-			// Not implemented here
-			toggleVissibility();
-			return true;
-		}
-		if (id == R.id.parentIconMenu) {
-			// Not implemented here
-			toggleVissibility();
-			return true;
-		}
+//		int id = item.getItemId();
+//		Toast.makeText(getApplicationContext(), "HI menu" + id,
+//				Toast.LENGTH_SHORT).show();
+//		if (id == R.id.parentNameMenu) {
+//			// Not implemented here
+//			toggleVissibility();
+//			return true;
+//		}
+//		if (id == R.id.parentIconMenu) {
+//			// Not implemented here
+//			toggleVissibility();
+//			return true;
+//		}
 		return super.onOptionsItemSelected(item);
 	}
 
@@ -362,8 +396,13 @@ public class DashBoardActivity extends ActionBarActivity implements
 						"ER Plan", R.drawable.er), TouchKinBookFragment.class,
 				b);
 
+
+
 		toolbar = (Toolbar) findViewById(R.id.tool_bar);
+
 		mTitle = (TextView) toolbar.findViewById(R.id.toolbar_title);
+
+
 		mTabHost.setOnTabChangedListener(new OnTabChangeListener() {
 			@Override
 			public void onTabChanged(String tabId) {
@@ -379,6 +418,8 @@ public class DashBoardActivity extends ActionBarActivity implements
 		parentRelativeLayout = (RelativeLayout) findViewById(R.id.parentListLayoutDashboard);
 		animSlideUp = AnimationUtils.loadAnimation(this, R.anim.slide_up);
 		animSlideDown = AnimationUtils.loadAnimation(this, R.anim.slide_down);
+
+
 	}
 
 	private TabSpec setIndicator(Context ctx, TabSpec spec, int resid,

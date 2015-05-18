@@ -9,7 +9,7 @@
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="@dimen/margin_largest"
         android:orientation="horizontal" >
 
         <TextView
@@ -18,17 +18,17 @@
             android:layout_height="wrap_content"
             android:text=""
             android:textColor="@color/text_orange"
-            android:textSize="17sp" />
+            android:textSize="@dimen/font_size_mid" />
 
         <TextView
             android:id="@+id/ParentLocTV"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="4dp"
-            android:layout_marginRight="4dp"
+            android:layout_marginLeft="@dimen/margin_smallest"
+            android:layout_marginRight="@dimen/margin_smallest"
             android:text="Mom is at Home"
             android:textColor="@color/text_orange"
-            android:textSize="17sp" />
+            android:textSize="@dimen/font_size_mid" />
 
         <TextView
             android:id="@+id/textView4"
@@ -36,13 +36,13 @@
             android:layout_height="wrap_content"
             android:text=""
             android:textColor="@color/text_orange"
-            android:textSize="17sp" />
+            android:textSize="@dimen/font_size_mid"/>
     </LinearLayout>
 
     <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="@dimen/margin_largest"
         android:background="@drawable/circular_image" >
 
         <RelativeLayout
@@ -53,13 +53,13 @@
             <fragment
                 android:id="@+id/map"
                 android:name="com.google.android.gms.maps.MapFragment"
-                android:layout_width="130dp"
-                android:layout_height="130dp"
+                android:layout_width="@dimen/size_circle_image"
+                android:layout_height="@dimen/size_circle_image"
                 android:layout_centerInParent="true" />
 
             <LinearLayout
-                android:layout_width="130dp"
-                android:layout_height="130dp"
+                android:layout_width="@dimen/size_circle_image"
+                android:layout_height="@dimen/size_circle_image"
                 android:layout_centerInParent="true"
                 android:background="@drawable/shape_circle"
                 android:orientation="vertical" >
@@ -68,16 +68,16 @@
 
         <com.touchKin.touchkinapp.custom.HoloCircularProgressBar
             android:id="@+id/holoCircularProgressBar"
-            android:layout_width="175dp"
-            android:layout_height="175dp"
+            android:layout_width="@dimen/size_holo_circular_progressBar"
+            android:layout_height="@dimen/size_holo_circular_progressBar"
             android:layout_centerInParent="true"
-            app:stroke_width="10dp" />
+            app:stroke_width="@dimen/stroke_holo_circular_progress" />
     </RelativeLayout>
 
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="@dimen/margin_normal"
         android:orientation="horizontal" >
 
         <TextView
@@ -86,7 +86,7 @@
             android:layout_height="wrap_content"
             android:text="Mom has left home"
             android:textColor="@color/text_orange"
-            android:textSize="17sp" />
+            android:textSize="@dimen/font_size_mid" />
 
         <TextView
             android:id="@+id/textView6"
@@ -96,7 +96,7 @@
             android:layout_marginRight="4dp"
             android:text="@string/kin_touch_duration"
             android:textColor="@color/text_grey"
-            android:textSize="17sp" />
+            android:textSize="@dimen/font_size_mid"  />
 
         <TextView
             android:id="@+id/textView7"
@@ -104,7 +104,7 @@
             android:layout_height="wrap_content"
             android:text="@string/ago_text"
             android:textColor="@color/text_orange"
-            android:textSize="17sp" />
+            android:textSize="@dimen/font_size_mid" />
     </LinearLayout>
 
 </LinearLayout>
